@@ -4,14 +4,20 @@ import classes from './Toolbar.module.css';
 import Logo from '../../Logo/Logo'
 import NavigationItems from '../NavigationItems/NavigationItems'
 
-const Toolbar = () => (
+const toolbar = (props) => (
     <header className={classes.Toolbar}>
-        <div>Menu</div>
-        <Logo />
-        <nav>
+        <div className={classes.DrawerToggle} onClick={props.open}>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div className={classes.Logo}>
+            <Logo />
+        </div>
+        <nav className={classes.DesktopOnly}>
             <NavigationItems />
         </nav>
     </header>
 )
 
-export default Toolbar;
+export default toolbar;
