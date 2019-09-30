@@ -3,14 +3,15 @@ import React from 'react';
 import Aux from '../../../hoc/Aux';
 import Button from '../../UI/Button/Button';
 
-const OrderSummary = (props) => {
+const orderSummary = (props) => {
+
     const OrderList = Object.keys(props.ingredients).map(igKey => {
         return (
             <li key={igKey}>
                 <span style={{textTransform: 'capitalize'}} >{igKey}</span>: {props.ingredients[igKey]}</li>
         )
     })
-    
+
     return(
         <Aux>
             <h3>Your Order</h3>
@@ -23,6 +24,7 @@ const OrderSummary = (props) => {
             <Button btnType="Success" clicked={props.checkoutClicked}>CHECKOUT</Button>
         </Aux>
     )
+    
 }
 
-export default OrderSummary;
+export default orderSummary;
