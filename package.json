@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://prayvakta.github.io/The-Burger-Builder/",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.6.0",
     "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
